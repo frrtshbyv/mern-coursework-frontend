@@ -21,25 +21,6 @@ const ProductCarousel = () => {
   ) : error ? (
     <Message variant="danger">{error}</Message>
   ) : (
-    <Carousel
-      style={{ height: '299px', width: '450px' }}
-      pause="hover"
-      className="bg-dark mx-auto"
-    >
-      {products.map((product) => (
-        <Carousel.Item key={product._id}>
-          <Link to={`/product/${product._id}`}>
-            <Image
-              className="d-block w-100"
-              style={{ minHeight: '100%' }}
-              src={product.image}
-              alt={product.name}
-              fluid
-            />
-          </Link>
-        </Carousel.Item>
-      ))}
-    </Carousel>
   );
 };
 
